@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niyantri Cafe - Contact</title>
+  <meta name="description" content="Contact Niyantri Cafe for reservations, events, or collaboration inquiries." />
+  <!-- fonts: Playfair Display, Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { display: ['Playfair Display', 'serif'], body: ['Inter', 'ui-sans-serif'] } } }
+    }
+  </script>
+</head>
+<body class="opacity-0 transition-opacity duration-1000 ease-in-out bg-slate-50 text-slate-800">
+  <!-- Header / Nav -->
+  <header class="bg-white/70 backdrop-blur-lg fixed w-full z-50 shadow-md">
+    <nav class="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <svg class="w-6 h-6 text-amber-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-label="coffee cup">
+          <path d="M3 6h10a4 4 0 0 1 0 8H3v2h18v-2H12a6 6 0 0 0 0-12H3v12h2V6h-2z"/>
+        </svg>
+        <span class="text-xl font-semibold">Niyantri Cafe</span>
+      </div>
+      <a href="./index.html" class="text-sm text-amber-700 hover:underline">Home</a>
+    </nav>
+  </header>
+
+  <main class="pt-28 pb-12 min-h-screen" style="font-family: Inter, sans-serif;">
+    <section class="max-w-5xl mx-auto px-6 md:px-8 animate-on-scroll opacity-0">
+      <h1 class="text-2xl md:text-3xl font-semibold mb-4">Contact Us</h1>
+      <p class="text-slate-700 mb-6">Have a question, want to reserve a table, or plan an event? Reach out and we’ll get back to you shortly.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <form action="#" method="post" class="bg-white p-6 rounded-xl shadow-md">
+          <div class="mb-4">
+            <label class="block text-sm mb-1">Name</label>
+            <input type="text" name="name" class="w-full border border-slate-200 rounded p-2" required />
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm mb-1">Email</label>
+            <input type="email" name="email" class="w-full border border-slate-200 rounded p-2" required />
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm mb-1">Message</label>
+            <textarea name="message" rows="4" class="w-full border border-slate-200 rounded p-2" required></textarea>
+          </div>
+          <button type="submit" class="px-4 py-2 rounded-md text-white bg-gradient-to-r from-amber-500 to-orange-600">Send Message</button>
+        </form>
+        <div class="bg-white p-6 rounded-xl shadow-md flex flex-col justify-center">
+          <h3 class="font-semibold mb-2">Our Location</h3>
+          <p class="text-sm text-slate-600">123 Aroma Ave, Hyderabad, India</p>
+          <p class="text-sm text-slate-600 mt-2">Phone: +91 98765 43210</p>
+          <p class="text-sm text-slate-600 mt-2">Email: hello@niyantri.cafe</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white/90 text-slate-700 py-6 mt-6">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <p class="text-sm">&copy; 2025 Niyantri Cafe. All rights reserved.</p>
+      <p class="text-sm">123 Aroma Ave, Hyderabad, India</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => document.body.classList.remove('opacity-0'));
+  </script>
+  <script>
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('opacity-100'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.1 });
+    animatedElements.forEach(el => { el.classList.add('transition-opacity','duration-1000','ease-in-out'); observer.observe(el); });
+  </script>
+</body>
+</html>
