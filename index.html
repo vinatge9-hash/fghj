@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niyantri Cafe - Home</title>
+  <meta name="description" content="Niyantri Cafe: A warm, inviting coffee shop offering rare roasts, handcrafted coffees, and cozy vibes." />
+  <!-- fonts: Playfair Display, Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Inter', 'ui-sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="opacity-0 transition-opacity duration-1000 ease-in-out bg-slate-50 text-slate-800">
+  <!-- Header / Nav -->
+  <header class="bg-white/70 backdrop-blur-lg fixed w-full z-50 shadow-md">
+    <nav class="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <!-- Coffee Icon -->
+        <svg class="w-6 h-6 text-amber-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-label="coffee cup">
+          <path d="M3 6h10a4 4 0 0 1 0 8H3v2h18v-2H12a6 6 0 0 0 0-12H3v12h2V6h-2z"/>
+        </svg>
+        <span class="text-xl font-semibold tracking-tight">Niyantri Cafe</span>
+      </div>
+      <button class="md:hidden p-2 rounded-md text-slate-700" id="mobile-menu-button" aria-label="Open menu">
+        <!-- Hamburger Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <ul class="hidden md:flex md:items-center md:space-x-6 font-medium">
+        <li><a href="./index.html" class="hover:text-amber-600 transition-all duration-300">Home</a></li>
+        <li><a href="./menu.html" class="hover:text-amber-600 transition-all duration-300">Menu</a></li>
+        <li><a href="./cart.html" class="hover:text-amber-600 transition-all duration-300">Cart</a></li>
+        <li><a href="./about.html" class="hover:text-amber-600 transition-all duration-300">About</a></li>
+        <li><a href="./contact.html" class="hover:text-amber-600 transition-all duration-300">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white/90 border-t border-b border-slate-200">
+      <ul class="px-4 py-2 space-y-2">
+        <li><a href="./index.html" class="block px-2 py-2 rounded">Home</a></li>
+        <li><a href="./menu.html" class="block px-2 py-2 rounded">Menu</a></li>
+        <li><a href="./cart.html" class="block px-2 py-2 rounded">Cart</a></li>
+        <li><a href="./about.html" class="block px-2 py-2 rounded">About</a></li>
+        <li><a href="./contact.html" class="block px-2 py-2 rounded">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero (Full-screen elegant hero) -->
+  <section class="relative h-screen w-full overflow-hidden">
+    <img src="https://images.pexels.com/photos/6826026/pexels-photo-6826026.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Moody coffee shop interior" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+      <div class="max-w-2xl text-white">
+        <h1 class="text-4xl md:text-6xl font-display tracking-tight mb-4" style="font-family: 'Playfair Display', serif;">Niyantri Cafe</h1>
+        <p class="text-lg md:text-2xl mb-6" style="font-family: Inter, sans-serif;">
+          A cozy corner for perfect brews, warm conversations, and moments that linger.
+        </p>
+        <a href="./menu.html" class="inline-block rounded-lg px-6 py-3 text-white font-semibold bg-gradient-to-r from-amber-500 to-orange-600 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">Explore Menu</a>
+      </div>
+    </div>
+    <div class="absolute bottom-6 left-0 right-0 flex justify-center">
+      <span class="text-white opacity-90 animate-bounce" aria-label="scroll-down">⭳</span>
+    </div>
+  </section>
+
+  <!-- Quotes / Testimonials -->
+  <section class="animate-on-scroll opacity-0 py-20 bg-slate-50" style="font-family: Inter, sans-serif;">
+    <div class="max-w-5xl mx-auto px-6 md:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-6">What our guests say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="p-5 bg-white rounded-xl shadow-md">"Every cup tells a story. The cozy vibe here is unmatched."</blockquote>
+        <blockquote class="p-5 bg-white rounded-xl shadow-md">"The vanilla latte is magical. Perfect balance and aroma."</blockquote>
+        <blockquote class="p-5 bg-white rounded-xl shadow-md">"Best croissants in town. A hidden gem for late mornings."</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-white/90 text-slate-700 py-6 mt-6">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <p class="text-sm">&copy; 2025 Niyantri Cafe. All rights reserved.</p>
+      <p class="text-sm">123 Aroma Ave, Hyderabad, India</p>
+    </div>
+  </footer>
+
+  <script>
+    // Page load fade-in
+    window.addEventListener('load', () => document.body.classList.remove('opacity-0'));
+  </script>
+  <script>
+    // Mobile menu toggle
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuButton) {
+      menuButton.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden', !isHidden);
+      });
+    }
+  </script>
+  <script>
+    // Scroll animation
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    animatedElements.forEach(el => {
+      el.classList.add('transition-opacity', 'duration-1000', 'ease-in-out');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
