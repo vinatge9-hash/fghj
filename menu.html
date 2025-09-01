@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niyantri Cafe - Menu</title>
+  <meta name="description" content="Explore the menu at Niyantri Cafe: handcrafted coffees, pastries, and treats." />
+  <!-- fonts: Playfair Display, Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Inter', 'ui-sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="opacity-0 transition-opacity duration-1000 ease-in-out bg-slate-50 text-slate-800">
+  <!-- Header / Nav -->
+  <header class="bg-white/70 backdrop-blur-lg fixed w-full z-50 shadow-md">
+    <nav class="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <!-- Coffee Icon -->
+        <svg class="w-6 h-6 text-amber-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-label="coffee cup">
+          <path d="M3 6h10a4 4 0 0 1 0 8H3v2h18v-2H12a6 6 0 0 0 0-12H3v12h2V6h-2z"/>
+        </svg>
+        <span class="text-xl font-semibold tracking-tight">Niyantri Cafe</span>
+      </div>
+      <button class="md:hidden p-2 rounded-md text-slate-700" id="mobile-menu-button2" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <ul class="hidden md:flex md:items-center md:space-x-6 font-medium">
+        <li><a href="./index.html" class="hover:text-amber-600 transition-all duration-300">Home</a></li>
+        <li><a href="./menu.html" class="hover:text-amber-600 transition-all duration-300">Menu</a></li>
+        <li><a href="./cart.html" class="hover:text-amber-600 transition-all duration-300">Cart</a></li>
+        <li><a href="./about.html" class="hover:text-amber-600 transition-all duration-300">About</a></li>
+        <li><a href="./contact.html" class="hover:text-amber-600 transition-all duration-300">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="mobile-menu2" class="md:hidden hidden bg-white/90 border-t border-b border-slate-200">
+      <ul class="px-4 py-2 space-y-2">
+        <li><a href="./index.html" class="block px-2 py-2 rounded">Home</a></li>
+        <li><a href="./menu.html" class="block px-2 py-2 rounded">Menu</a></li>
+        <li><a href="./cart.html" class="block px-2 py-2 rounded">Cart</a></li>
+        <li><a href="./about.html" class="block px-2 py-2 rounded">About</a></li>
+        <li><a href="./contact.html" class="block px-2 py-2 rounded">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="min-h-screen pt-28 pb-20" style="font-family: Inter, sans-serif;">
+    <section class="max-w-7xl mx-auto px-6 md:px-8 animate-on-scroll opacity-0">
+      <div class="flex items-center justify-between mb-6">
+        <h1 class="text-3xl font-semibold">Our Menu</h1>
+        <a href="./cart.html" class="inline-flex items-center gap-2 text-white px-4 py-2 rounded-md bg-gradient-to-r from-amber-500 to-orange-600 hover:shadow-lg transition-all duration-300">Open Cart</a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Menu Item 1 -->
+        <div class="bg-white rounded-xl shadow-md p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <img src="https://images.pexels.com/photos/5461662/pexels-photo-5461662.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Espresso cup" class="w-full h-40 object-cover rounded-md mb-3" />
+          <h3 class="text-lg font-semibold">Espresso</h3>
+          <p class="text-sm text-slate-600">A bold shot with deep chocolate notes.</p>
+          <div class="flex items-center justify-between mt-3">
+            <span class="font-semibold">$3.50</span>
+            <button class="text-white px-3 py-2 rounded-md bg-gradient-to-r from-amber-500 to-orange-600 hover:shadow-lg transition-all duration-300">Add</button>
+          </div>
+        </div>
+        <!-- Menu Item 2 -->
+        <div class="bg-white rounded-xl shadow-md p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <img src="https://images.unsplash.com/photo-1561936191-9d709920bf0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw3fHxhJTIwbGF0dGUlMjBpbiUyMGElMjBnbGFzcyUyMGN1cCUyMHdpdGglMjBsYXR0ZSUyMGFydHxlbnwwfDB8fHwxNzU2NzI0MjI0fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Latte" class="w-full h-40 object-cover rounded-md mb-3" />
+          <h3 class="text-lg font-semibold">Latte</h3>
+          <p class="text-sm text-slate-600">Silky steamed milk topped with artful foam.</p>
+          <div class="flex items-center justify-between mt-3">
+            <span class="font-semibold">$4.50</span>
+            <button class="text-white px-3 py-2 rounded-md bg-gradient-to-r from-amber-500 to-orange-600 hover:shadow-lg transition-all duration-300">Add</button>
+          </div>
+        </div>
+        <!-- Menu Item 3 -->
+        <div class="bg-white rounded-xl shadow-md p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <img src="https://images.unsplash.com/photo-1746281673841-31a64ca33ef1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw2fHxhJTIwY2FwcHVjY2lubyUyMHdpdGglMjBiZWF1dGlmdWwlMjBjcmVtYXxlbnwwfDB8fHwxNzU2NzI0MjI0fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Cappuccino" class="w-full h-40 object-cover rounded-md mb-3" />
+          <h3 class="text-lg font-semibold">Cappuccino</h3>
+          <p class="text-sm text-slate-600">Espresso with steamed milk and a rich crema.</p>
+          <div class="flex items-center justify-between mt-3">
+            <span class="font-semibold">$4.00</span>
+            <button class="text-white px-3 py-2 rounded-md bg-gradient-to-r from-amber-500 to-orange-600 hover:shadow-lg transition-all duration-300">Add</button>
+          </div>
+        </div>
+        <!-- Menu Item 4 -->
+        <div class="bg-white rounded-xl shadow-md p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <img src="https://images.pexels.com/photos/851555/pexels-photo-851555.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Iced Coffee" class="w-full h-40 object-cover rounded-md mb-3" />
+          <h3 class="text-lg font-semibold">Iced Americano</h3>
+          <p class="text-sm text-slate-600">Chilled espresso with a splash of water, over ice.</p>
+          <div class="flex items-center justify-between mt-3">
+            <span class="font-semibold">$3.75</span>
+            <button class="text-white px-3 py-2 rounded-md bg-gradient-to-r from-amber-500 to-orange-600 hover:shadow-lg transition-all duration-300">Add</button>
+          </div>
+        </div>
+        <!-- Menu Item 5 -->
+        <div class="bg-white rounded-xl shadow-md p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <img src="https://images.unsplash.com/photo-1704572958280-a920df13da69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwyfHxibHVlYmVycnklMjBtdWZmaW4lMjBpbiUyMGElMjBiYWtlcnklMjBzZXR0aW5nfGVufDB8MHx8fDE3NTY3MjQyMjZ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Blueberry Muffin" class="w-full h-40 object-cover rounded-md mb-3" />
+          <h3 class="text-lg font-semibold">Blueberry Muffin</h3>
+          <p class="text-sm text-slate-600">Fresh berries, fluffy crumb, and a hint of lemon zest.</p>
+          <div class="flex items-center justify-between mt-3">
+            <span class="font-semibold">$2.75</span>
+            <button class="text-white px-3 py-2 rounded-md bg-gradient-to-r from-amber-500 to-orange-600 hover:shadow-lg transition-all duration-300">Add</button>
+          </div>
+        </div>
+        <!-- Menu Item 6 -->
+        <div class="bg-white rounded-xl shadow-md p-4 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+          <img src="https://pixabay.com/get/g84a5bb50df80b92d6bac183ddb7ce147df1545a61631b3c64385afbf8f5a2304bc512b6408ca96378fbbf1739edb131af268dca295931a3d9123316ae8912660_640.jpg" alt="Chocolate Cake" class="w-full h-40 object-cover rounded-md mb-3" />
+          <h3 class="text-lg font-semibold">Chocolate Cake Slice</h3>
+          <p class="text-sm text-slate-600">Rich, moist chocolate cake with ganache frosting.</p>
+          <div class="flex items-center justify-between mt-3">
+            <span class="font-semibold">$3.50</span>
+            <button class="text-white px-3 py-2 rounded-md bg-gradient-to-r from-amber-500 to-orange-600 hover:shadow-lg transition-all duration-300">Add</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white/90 text-slate-700 py-6 mt-6">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <p class="text-sm">&copy; 2025 Niyantri Cafe. All rights reserved.</p>
+      <p class="text-sm">123 Aroma Ave, Hyderabad, India</p>
+    </div>
+  </footer>
+
+  <script>
+    // Page load fade-in
+    window.addEventListener('load', () => document.body.classList.remove('opacity-0'));
+  </script>
+  <script>
+    // Mobile menu toggle
+    const btn2 = document.getElementById('mobile-menu-button2');
+    const menu2 = document.getElementById('mobile-menu2');
+    if (btn2) btn2.addEventListener('click', () => {
+      const hidden = menu2.classList.contains('hidden');
+      menu2.classList.toggle('hidden', !hidden);
+    });
+  </script>
+  <script>
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    animatedElements.forEach(el => {
+      el.classList.add('transition-opacity', 'duration-1000', 'ease-in-out');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
